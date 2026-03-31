@@ -1,10 +1,18 @@
-# 虚拟环境
+# 1. 虚拟环境 & 缓存（必须过滤）
 .venv/
 __pycache__/
-# 敏感配置文件
+*.py[cod]
+*$py.class
+
+# 2. 敏感配置文件（绝对不能上传，保护API密钥）
 config/.env
-# 个人照片
+
+# 3. IDE配置文件（过滤，避免本地环境污染）
+.idea/
+*.iml
+*.iws
+
+# 4. 个人隐私文件（过滤，避免泄露人脸照片）
 images/*.jpg
 images/*.png
-# IDE配置
-.idea/
+images/test/
